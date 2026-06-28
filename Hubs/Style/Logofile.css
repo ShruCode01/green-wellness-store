@@ -1,0 +1,55 @@
+.logo-container {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.logo-container h1 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #184e25;
+  margin-bottom: 50px;
+}
+
+.logoFile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.logo-item {
+  text-align: center;
+}
+
+.logo-item img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.logo-item:hover img {
+  transform: scale(1.08);
+}
+
+.logo-item h5 {
+  font-size: 13px;
+  color: #333;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .logoFile {
+    gap: 30px;
+  }
+  .logo-item img {
+    width: 90px;
+    height: 90px;
+  }
+  .logo-item h5 {
+    font-size: 11px;
+  }
+}

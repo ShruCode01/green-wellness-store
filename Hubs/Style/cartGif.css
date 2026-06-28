@@ -1,0 +1,63 @@
+.heading3{
+    color: green;
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 250px;
+    
+}
+
+.video-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* Keeps rounded corners visible */
+  border-radius: 20px;
+  margin-top: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: #fff; /* Prevents dark overlay when scaling */
+}
+
+.video-media {
+  /* width: 100%; */
+  height: 280px;
+  object-fit: cover;
+  border-radius: 20px; /* Match parent */
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 10px gray;
+  display: block;
+  border: 2ps solid black;
+}
+
+/* Hover effect */
+.video-wrapper:hover .video-media {
+  transform: scale(1.1);
+  filter: brightness(1.1) contrast(1.1);
+  box-shadow: 0 8px 15px gray;
+}
+
+/* Glow effect for a natural theme */
+.video-wrapper:hover {
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(50, 205, 50, 0.3); /* soft green glow */
+}
+
+/* Responsive sizes */
+@media (min-width: 768px) {
+  .video-media {
+    height: 380px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .video-media {
+    height: 500px;
+    width:300px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .video-media {
+    height: 550px;
+  }
+}

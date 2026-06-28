@@ -1,0 +1,66 @@
+.heading {
+  background-color: rgb(231, 221, 221);
+  padding: auto;
+}
+
+/* Container width */
+.groceries {
+  margin-left: auto;
+  margin-right: auto;
+  width: 950px;
+}
+
+/* Icons layout */
+.natural-icons img {
+  height: 200px;
+  width: auto;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+/* Text below icons */
+h6 {
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+/* 🔸 Responsiveness */
+
+/* For tablets */
+@media (max-width: 992px) {
+  .groceries {
+    width: 100%;
+  }
+  .natural-icons img {
+    height: 160px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .natural-icons {
+    gap: 2rem;
+  }
+  .natural-icons img {
+    height: 130px;
+  }
+  h6 {
+    font-size: 15px;
+  }
+}
+
+/* For small phones */
+@media (max-width: 576px) {
+  .natural-icons img {
+    height: 100px;
+  }
+  .heading h3 {
+    font-size: 1.4rem;
+  }
+  .heading h6 {
+    font-size: 0.9rem;
+  }
+  h6 {
+    font-size: 14px;
+  }
+}

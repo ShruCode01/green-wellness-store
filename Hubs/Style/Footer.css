@@ -1,0 +1,106 @@
+.footer-section {
+  background-color: #09121b;
+  margin-top: 120px;
+}
+
+/* Brand colors */
+.text-green {
+  color: green; /* Herbal green */
+}
+
+.text-blue {
+  color: blue; /* Calm blue */
+}
+
+/* Logo hover */
+.footer-logo {
+  transition: transform 0.4s ease;
+ 
+}
+.footer-logo:hover {
+  color: #ffa500;
+  transform: scale(1.05);
+}
+
+/* Quick links */
+.quick-links li {
+  margin: 6px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.quick-links li:hover {
+  color: #ffa500;
+  transform: translateX(5px);
+}
+
+/* Social Icons hover */
+.social-icons a {
+  transition: all 0.3s ease-in-out;
+}
+.social-icons a:hover {
+  color: #ffa500;
+  transform: scale(1.2);
+}
+
+/* Divider line */
+.footer-divider {
+  width: 100vw; /* Full viewport width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw; /* Remove container limit */
+  margin-right: -50vw;
+}
+
+.footer-line {
+  border: none;
+  border-top: 2px solid #a35d14;
+  opacity: 0.8;
+  width: 100%;
+  margin: 0;
+}
+
+/* Contact icon hover */
+.contact-section i {
+  transition: color 0.3s ease;
+}
+.contact-section i:hover {
+  color: #ffa500;
+}
+.listItems li:hover {
+  color: #ffa500;
+  transform: translateX(5px);
+}
+/* Responsive adjustments */
+
+  .footer-logo {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .footer-brand {
+    text-align: center;
+  }
+  /* Quick links */
+  .quick-links li {
+    margin: 6px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .quick-links li:hover {
+    color: #ffa500;
+    transform: translateX(5px);
+  }
+
+  /* Quick links - target the Link inside li */
+  .quick-links li a {
+    color: #fff !important; /* Default link color */
+    text-decoration: none !important; /* Remove underline */
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .quick-links li a:hover {
+    color: #ffa500 !important; /* Hover color */
+    text-decoration: none !important; /* No underline on hover */
+    transform: translateX(5px); /* Optional shift effect */
+  }

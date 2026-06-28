@@ -1,0 +1,93 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Logo Colors */
+.logo-text-green {
+  font-size: 26px;
+  font-weight: bold;
+  color: #188c2e;
+}
+
+.logo-text-blue {
+  font-size: 26px;
+  font-weight: bold;
+  color: #006bd6;
+}
+
+/* Nav Links */
+.nav-link {
+  font-weight: 600;
+  color: #000 !important;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #188c2e !important;
+}
+
+/* Underline Hover */
+.nav-link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #188c2e;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Search */
+.search-wrapper input {
+  width: 160px;
+}
+
+.search-btn {
+  background: #188c2e;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Icon Hover */
+.icon-hover {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.icon-hover:hover {
+  color: #188c2e;
+}
+
+/* Dropdown */
+.dropdown-box {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 120px;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  color: black;
+  padding: 6px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f2f2f2;
+}
+
+/* Mobile Center */
+@media(max-width: 992px) {
+  .search-wrapper input {
+    width: 100%;
+  }
+}

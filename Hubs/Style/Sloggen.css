@@ -1,0 +1,22 @@
+.heading2{
+    
+    font-weight: bold;
+    font-size: 30px;
+    color:green ;
+}
+.para{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(57, 57, 214);
+}
+.heading5{
+    font-size: 17px;
+    text-align: center;
+    margin: auto;
+    max-width: 600px;
+    width: 90%;
+    line-height: 1.7;
+}

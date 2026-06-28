@@ -1,0 +1,312 @@
+.cart-container {
+  width: 100%;
+  min-height: 500px;
+ 
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-top: 58px;
+ 
+}
+
+.cart-card-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cart-footer-img {
+  width: 100%;
+  max-width: 850px; /* you can adjust */
+  border-radius: 12px;
+  /* border-bottom: 12px; */
+  opacity: 0.9;
+  transition: 0.3s ease;
+}
+
+.cart-footer-img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+/* Heading style */
+.cart-heading {
+   color: rgba(13, 104, 3, 0.93);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+/* Grid layout */
+.cart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  width: 90%;
+  max-width: 1176px;
+}
+
+/* Card style */
+.cart-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cart-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Card heading */
+.cart-card h3 {
+  font-size: 1.4rem;
+  color: rgba(13, 104, 3, 0.93);
+  margin-bottom: 10px;
+}
+
+/* Card text */
+.cart-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Button styling */
+.cart-btn {
+  margin-top: 15px;
+  background-color: #4caf50;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 80px;
+}
+
+.cart-btn:hover {
+  background-color: #388e3c;
+}
+/* =========================
+   Tablet
+========================= */
+@media (max-width: 768px) {
+
+  .cart-container{
+    padding:20px 12px;
+    margin-top:40px;
+  }
+
+  .cart-grid{
+    grid-template-columns:1fr;
+    width:100%;
+    gap:20px;
+  }
+
+  .cart-card{
+    padding:20px;
+  }
+
+  .cart-heading{
+    font-size:1.6rem;
+    margin-bottom:30px;
+  }
+
+  .cart-btn{
+    width:100%;
+    margin-left:0;
+    padding:12px;
+  }
+
+  .cart-footer-img{
+    width:100%;
+    height:auto;
+  }
+
+  .products-scroll-box{
+    max-height:300px;
+  }
+
+}
+
+
+/* =========================
+   Mobile
+========================= */
+@media (max-width: 480px) {
+
+  .cart-product-card{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cart-product-left{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .cart-product-img{
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+  }
+
+  .cart-product-left > div{
+    flex: 1;
+    min-width: 0;
+  }
+
+  .prod-name{
+    font-size: 15px;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  .prod-price{
+    font-size: 14px;
+    margin: 4px 0;
+  }
+
+  .qty-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .qty-btn{
+    width: 34px;
+    height: 34px;
+    padding: 0;
+  }
+
+  .qty-display{
+    min-width: 20px;
+    text-align: center;
+  }
+
+  .remove-pill-btn{
+    width: 100%;
+    margin-top: 5px;
+  }
+
+}
+
+
+/* Responsive: ensure cards stack neatly */
+@media (max-width: 768px) {
+  .cart-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-heading {
+    font-size: 1.6rem;
+  }
+}
+
+.button{
+    background-color:  rgba(13, 104, 3, 0.93);;
+}
+
+
+.cart-product-card {
+  background: #fff;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.cart-product-left {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.cart-product-img {
+  width:70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.prod-name {
+  font-weight: 600;
+  margin: 0;
+  font-size: 14px;
+}
+
+.prod-price {
+  margin: 3px 0;
+  color: #444;
+  font-size: 13px;
+}
+
+.qty-box {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.qty-btn {
+  background: #e6c9a3;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: auto;
+  
+}
+
+.qty-display {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.remove-pill-btn {
+  background: #ff4b4b;
+  border: none;
+  padding: 2px 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.remove-pill-btn:hover {
+  background: #e63939;
+}
+.products-scroll-box {
+  max-height: 350px;  /* fix height */
+  overflow-y: auto;   /* scroll */
+  padding-right: 5px;
+}
+
+.products-scroll-box::-webkit-scrollbar {
+  width: 6px;
+}
+.products-scroll-box::-webkit-scrollbar-thumb {
+  background: #cfcfcf;
+  border-radius: 10px;
+}
+
