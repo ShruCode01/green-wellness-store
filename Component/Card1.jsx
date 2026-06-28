@@ -9,25 +9,25 @@ const Card1 = () => {
       id: 1,
       name: "Desi Cow Ghee - 1 Litre",
       price: 1000,
-      image: "/Image/gee1.jpeg",
+      image: "/gee1.jpeg",
     },
     {
       id: 2,
       name: "Ahinsak Ghee - 1 Litre",
       price: 1200,
-      image: "/Image/gee2.jpeg",
+      image: "/gee2.jpeg",
     },
     {
       id: 3,
       name: "Vedic Bil Ghee - 1 Litre",
       price: 1300,
-      image: "/Image/gee3.jpeg",
+      image: "/gee3.jpeg",
     },
     {
       id: 4,
       name: "Pure Ghee - 1 Litre",
       price: 3000,
-      image: "/Image/gee4.jpeg",
+      image: "/gee4.jpeg",
     },
   ];
 
