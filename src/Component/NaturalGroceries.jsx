@@ -13,56 +13,56 @@ const NaturalGroceries = () => {
         <div className="natural-icons d-flex gap-5 justify-content-center align-items-center flex-wrap">
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="../Image/Grain&Daliya.png" alt="" />
+              <img src="/Grain&Daliya.png" alt="" />
               <h6>Grain And Daliya</h6>
             </a>
           </div>
 
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="../Image/flours.png" alt="" />
+              <img src="/flours.png" alt="" />
               <h6>Flour</h6>
             </a>
           </div>
 
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="../Image/oil&Ghee.png" alt="" />
+              <img src="/oil&Ghee.png" alt="" />
               <h6>Oil & Ghee</h6>
             </a>
           </div>
 
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="../Image/pulses.png" alt="" />
+              <img src="/pulses.png" alt="" />
               <h6>Pulses</h6>
             </a>
           </div>
 
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="../Image/Jaggery.png" alt="" />
+              <img src="/Jaggery.png" alt="" />
               <h6>Jaggery</h6>
             </a>
           </div>
 
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="../Image/SugarandSalt.png" alt="" />
+              <img src="/SugarandSalt.png" alt="" />
               <h6>Salt & Sugar</h6>
             </a>
           </div>
 
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="../Image/Honey.png" alt="" />
+              <img src="e/Honey.png" alt="" />
               <h6>Honey, Jam & Gulkand</h6>
             </a>
           </div>
 
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="../Image/superfood.png" alt="" />
+              <img src="/superfood.png" alt="" />
               <h6>Super Food</h6>
             </a>
           </div>

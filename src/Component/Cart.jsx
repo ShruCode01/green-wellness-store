@@ -161,7 +161,7 @@ Total: ₹${totalPrice}`;
 
           <div className="cart-card-footer">
             <img
-              src="../Image/deliver.jpeg"
+              src="/deliver.jpeg"
               alt="Decorative footer"
               className="cart-footer-img"
             />

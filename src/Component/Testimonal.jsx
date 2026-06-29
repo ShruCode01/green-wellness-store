@@ -13,14 +13,14 @@ const Testimonial = () => {
   };
 
   const testimonials = [
-    { id: 1, name: "Shruti", text: "Best herbal experience ever!", img: "../Image/Dp.png" },
-    { id: 2, name: "Sneha", text: "Loved the natural quality!", img: "../Image/Dp.png" },
-    { id: 3, name: "Simran", text: "Feels authentic and pure!", img: "../Image/Dp.png" },
-    { id: 4, name: "Neha", text: "Amazing range of products!", img: "../Image/Dp.png" },
-    { id: 5, name: "Raj", text: "Fast delivery and genuine herbs!", img: "../Image/Dp.png" },
-    { id: 6, name: "Priya", text: "My skin feels refreshed!", img: "../Image/Dp.png" },
-    { id: 7, name: "Arjun", text: "Love the Ayurvedic touch!", img: "../Image/Dp.png" },
-    { id: 8, name: "Divya", text: "Very trustworthy brand!", img: "../Image/Dp.png" },
+    { id: 1, name: "Shruti", text: "Best herbal experience ever!", img: "/Dp.png" },
+    { id: 2, name: "Sneha", text: "Loved the natural quality!", img: "/Dp.png" },
+    { id: 3, name: "Simran", text: "Feels authentic and pure!", img: "/Dp.png" },
+    { id: 4, name: "Neha", text: "Amazing range of products!", img: "/Dp.png" },
+    { id: 5, name: "Raj", text: "Fast delivery and genuine herbs!", img: "/Dp.png" },
+    { id: 6, name: "Priya", text: "My skin feels refreshed!", img: "/Dp.png" },
+    { id: 7, name: "Arjun", text: "Love the Ayurvedic touch!", img: "/Dp.png" },
+    { id: 8, name: "Divya", text: "Very trustworthy brand!", img: "/Dp.png" },
   ];
 
   return (
