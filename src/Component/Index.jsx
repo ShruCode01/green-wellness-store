@@ -19,16 +19,16 @@ function Index() {
       <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src="/HerbsImage.png" className="d-block w-100" alt="Herbs Banner" style={{ height: "600px" }} />
+            <img   src={`${import.meta.env.BASE_URL}HerbsImage.png`} className="d-block w-100" alt="Herbs Banner" style={{ height: "600px" }} />
           </div>
           <div className="carousel-item">
-            <img src="/GheeProduct.png" className="d-block w-100" alt="Ghee Product" style={{ height: "600px" }} />
+            <img src={`${import.meta.env.BASE_URL}GheeProduct.png`} className="d-block w-100" alt="Ghee Product" style={{ height: "600px" }} />
           </div>
           <div className="carousel-item">
-            <img src="/faceIngredients.png" className="d-block w-100" alt="Face Ingredients" style={{ height: "600px" }} />
+            <img src={`${import.meta.env.BASE_URL}faceIngredients.png`} className="d-block w-100" alt="Face Ingredients" style={{ height: "600px" }} />
           </div>
           <div className="carousel-item">
-            <img src="/HoneyImage.png" className="d-block w-100" alt="Honey Image" style={{ height: "600px" }} />
+            <img src={`${import.meta.env.BASE_URL}HoneyImage.png`} className="d-block w-100" alt="Honey Image" style={{ height: "600px" }} />
           </div>
         </div>
 

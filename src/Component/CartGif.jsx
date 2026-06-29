@@ -4,9 +4,9 @@ import "../Style/cartGif.css";
 
 const CartGif = () => {
   const videoItems = [
-    { id: 1, title: "Pure Honey", video: "/Natural.gif" },
-    { id: 2, title: "Natural Face Ingredients", video: "/FaceIngredient.mp4" },
-    { id: 3, title: "Natural Masale", video: "/NaturalMasale.mp4" },
+    { id: 1, title: "Pure Honey", video: `${import.meta.env.BASE_URL}Natural.gif` },
+    { id: 2, title: "Natural Face Ingredients", video: `${import.meta.env.BASE_URL}FaceIngredient.mp4` },
+    { id: 3, title: "Natural Masale", video: `${import.meta.env.BASE_URL}NaturalMasale.mp4` },
   ];
 
   return (

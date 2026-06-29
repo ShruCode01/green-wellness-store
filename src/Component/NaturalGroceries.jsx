@@ -13,56 +13,56 @@ const NaturalGroceries = () => {
         <div className="natural-icons d-flex gap-5 justify-content-center align-items-center flex-wrap">
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="/Grain&Daliya.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}Grain&Daliya.png`} alt="" />
               <h6>Grain And Daliya</h6>
             </a>
           </div>
 
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="/flours.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}flours.png`} alt="" />
               <h6>Flour</h6>
             </a>
           </div>
 
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="/oil&Ghee.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}oil&Ghee.png`} alt="" />
               <h6>Oil & Ghee</h6>
             </a>
           </div>
 
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="/pulses.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}pulses.png`} alt="" />
               <h6>Pulses</h6>
             </a>
           </div>
 
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="/Jaggery.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}Jaggery.png`} alt="" />
               <h6>Jaggery</h6>
             </a>
           </div>
 
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="/SugarandSalt.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}SugarandSalt.png`} alt="" />
               <h6>Salt & Sugar</h6>
             </a>
           </div>
 
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="e/Honey.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}Honey.png`} alt="" />
               <h6>Honey, Jam & Gulkand</h6>
             </a>
           </div>
 
           <div>
             <a href="#" className="text-decoration-none text-black">
-              <img src="/superfood.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}superfood.png`} alt="" />
               <h6>Super Food</h6>
             </a>
           </div>

@@ -17,28 +17,28 @@ const Store = () => {
 
       <div className="card-container">
         <div className="card">
-          <img src="/Gee.jpeg" alt="Gee" />
+          <img   src={`${import.meta.env.BASE_URL}Gee.jpeg`} alt="Gee" />
           <h3>Ahinsak Gau Ghee</h3>
           <p>The secret of pure taste</p>
           <Link to="/card1"><button>View More</button></Link>
         </div>
 
         <div className="card">
-          <img src="/Gir.jpeg" alt="Gir" />
+          <img src={`${import.meta.env.BASE_URL}Gir.jpeg`} alt="Gir" />
           <h3>Ayurvedic Food By Category</h3>
           <p>Pure honey, nature’s sweet gift.</p>
           <Link to="/card2"><button>View More</button></Link>
         </div>
 
         <div className="card">
-          <img src="/face.jpeg" alt="Face" />
+          <img src={`${import.meta.env.BASE_URL}face.jpeg`} alt="Face" />
           <h3>Face Care</h3>
           <p>Face glow, naturally.</p>
           <Link to="/card3"><button>View More</button></Link>
         </div>
 
         <div className="card">
-          <img src="/pack1.jpeg" alt="Pack" />
+          <img src={`${import.meta.env.BASE_URL}pack1.jpeg`} alt="Pack" />
           <h3>Ayurvedic Churna</h3>
           <p>Full of Vitamin C & natural energy.</p>
           <Link to="/card4"><button>View More</button></Link>

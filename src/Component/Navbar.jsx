@@ -12,7 +12,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="d-flex align-items-center gap-2">
-          <img src="/HerbsLogo.PNG" height="60px" alt="Logo" />
+          <img src={`${import.meta.env.BASE_URL}HerbsLogo.PNG`} height="60px" alt="Logo" />
           <span className="logo-text-green">Chauhan</span>
           <span className="logo-text-blue">Herbs</span>
         </div>

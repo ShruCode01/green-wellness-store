@@ -24,7 +24,7 @@ const Cartupi = () => {
       </div>
 
       <div className="qr-section">
-        <img src="/image.png" alt="Payment QR Code" className="qr-image" />
+        <img src={`${import.meta.env.BASE_URL}image.png`} alt="Payment QR Code" className="qr-image" />
         <p className="scan-text">Scan this QR code to pay easily</p>
       </div>
 

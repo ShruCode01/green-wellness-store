@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="col-12 col-md-3 d-flex flex-column align-items-center align-items-md-start">
             <img
-              src="/HerbsLogo.PNG"
+              src={`${import.meta.env.BASE_URL}HerbsLogo.PNG`}
               alt="Chauhan Herbs Logo"
               className="img-fluid mb-3 rounded-circle footer-logo"
               style={{ width: "200px", height: "200px", objectFit: "contain" }}

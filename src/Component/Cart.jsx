@@ -161,7 +161,7 @@ Total: ₹${totalPrice}`;
 
           <div className="cart-card-footer">
             <img
-              src="/deliver.jpeg"
+                src={`${import.meta.env.BASE_URL}deliver.jpeg`}
               alt="Decorative footer"
               className="cart-footer-img"
             />
