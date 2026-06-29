@@ -33,26 +33,26 @@ const Aboutus = () => {
 
       <div className="logoFile">
         <div className="logo-item">
-          <img src="/Image/Non-Gmo.png" alt="Non-GMO" />
+          <img src="/Non-Gmo.png" alt="Non-GMO" />
           <h5>NON-GMO <br />Product</h5>
         </div>
 
         <div className="logo-item">
-          <img src="/Image/Click.png" alt="Ethical & Natural" />
+          <img src="/Click.png" alt="Ethical & Natural" />
           <h5>Ethical & Natural</h5>
         </div>
         <div className="logo-item">
-          <img src="/Image/Heart.png" alt="Quality Guaranteed" />
+          <img src="/Heart.png" alt="Quality Guaranteed" />
           <h5>Quality you’ll <br />Love Guaranteed</h5>
         </div>
 
         <div className="logo-item">
-          <img src="/Image/Non-Gmo.png" alt="Minimum Order" />
+          <img src="/Non-Gmo.png" alt="Minimum Order" />
           <h5>Minimum Order <br />Value ₹255</h5>
         </div>
 
         <div className="logo-item">
-          <img src="/Image/Like.png" alt="Best Services" />
+          <img src="/Like.png" alt="Best Services" />
           <h5>Best Services</h5>
         </div>
       </div>
