@@ -26,7 +26,6 @@ import { useCart } from "./Component/CartContext";
 import "./Style/Index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-
 const products = [
   "Ashwagandha",
   "Shilajit",
@@ -111,7 +110,11 @@ const App = () => {
 >
   {/* Logo */}
   <div className="d-flex align-items-center gap-2">
-    <img src="Hubs\Image\HerbsLogo.PNG" height="60" alt="logo" />
+    <img
+  src={`${import.meta.env.BASE_URL}HerbsLogo.PNG`}
+  height="60"
+  alt="logo"
+/>
     <div>
       <span className="text-success fw-bold d-block">Chauhan</span>
       <span className="text-primary fw-bold d-block">Herbs</span>
