@@ -101,3 +101,114 @@
   position: relative;
   z-index: 1;
 }
+
+
+/* ==========================================
+   Tablet (768px - 991px)
+========================================== *
+/
+/* ==========================================
+   Flipkart Style Responsive
+========================================== */
+
+@media (max-width:991px){
+
+  .card-container{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:10px;
+      padding:10px;
+  }
+
+  .product-card{
+
+      width:100%;
+      padding:8px;
+      border-radius:8px;
+  }
+
+  .product-image{
+      width:100% !important;
+      height:150px !important;
+      object-fit:contain;
+      margin-bottom:8px;
+  }
+
+  .product-title{
+      font-size:13px;
+      line-height:18px;
+      min-height:36px;
+      margin-bottom:5px;
+  }
+
+  .product-price{
+      font-size:13px;
+      margin-bottom:5px;
+  }
+
+  .product-rating{
+      font-size:11px;
+      margin-bottom:8px;
+  }
+
+  .add-btn{
+
+      width:100%;
+      padding:6px;
+      font-size:11px;
+      border-radius:5px;
+  }
+
+  .main-heading{
+      font-size:22px;
+      padding:0 10px;
+      line-height:32px;
+  }
+
+}
+
+
+/* ==========================================
+   Galaxy Fold / 340px phones
+========================================== */
+
+@media (max-width:360px){
+
+.card-container{
+    gap:6px;
+    padding:6px;
+}
+
+.product-card{
+    padding:6px;
+}
+
+.product-image{
+    height:120px !important;
+}
+
+.product-title{
+    font-size:11px;
+    line-height:15px;
+    min-height:30px;
+}
+
+.product-price{
+    font-size:11px;
+}
+
+.product-rating{
+    font-size:9px;
+}
+
+.add-btn{
+    font-size:9px;
+    padding:5px;
+}
+
+.main-heading{
+    font-size:18px;
+    line-height:26px;
+}
+
+}
