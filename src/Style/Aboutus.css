@@ -67,3 +67,48 @@
   transform: scale(1.2);
   filter: brightness(1.1);
 }
+
+
+/* ===========================
+   Mobile & Tablet Responsive
+   =========================== */
+
+@media (max-width: 991px) {
+
+  .logoFile {
+    display: flex;
+    flex-wrap: nowrap;          /* Keep all logos in one row */
+    overflow-x: auto;           /* Horizontal scrolling */
+    justify-content: flex-start;
+    gap: 25px;
+    padding: 10px 15px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;      /* Firefox */
+  }
+
+  .logoFile::-webkit-scrollbar {
+    display: none;              /* Chrome, Edge, Safari */
+  }
+
+  .logo-item {
+    flex: 0 0 auto;             /* Prevent shrinking */
+    min-width: 110px;
+    text-align: center;
+  }
+
+  .logo-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo-item h5 {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  .logo-container h1 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+}
