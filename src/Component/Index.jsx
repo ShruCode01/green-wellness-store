@@ -19,16 +19,16 @@ function Index() {
       <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img   src={`${import.meta.env.BASE_URL}HerbsImage.png`} className="d-block w-100" alt="Herbs Banner" style={{ height: "600px" }} />
+            <img   src={`${import.meta.env.BASE_URL}HerbsImage.png`} className="d-block w-100" alt="Herbs Banner"  />
           </div>
           <div className="carousel-item">
-            <img src={`${import.meta.env.BASE_URL}GheeProduct.png`} className="d-block w-100" alt="Ghee Product" style={{ height: "600px" }} />
+            <img src={`${import.meta.env.BASE_URL}GheeProduct.png`} className="d-block w-100" alt="Ghee Product"  />
           </div>
           <div className="carousel-item">
-            <img src={`${import.meta.env.BASE_URL}faceIngredients.png`} className="d-block w-100" alt="Face Ingredients" style={{ height: "600px" }} />
+            <img src={`${import.meta.env.BASE_URL}faceIngredients.png`} className="d-block w-100" alt="Face Ingredients"  />
           </div>
           <div className="carousel-item">
-            <img src={`${import.meta.env.BASE_URL}HoneyImage.png`} className="d-block w-100" alt="Honey Image" style={{ height: "600px" }} />
+            <img src={`${import.meta.env.BASE_URL}HoneyImage.png`} className="d-block w-100" alt="Honey Image"  />
           </div>
         </div>
 
@@ -38,6 +38,8 @@ function Index() {
         <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
           <span className="carousel-control-next-icon"></span>
         </button>
+
+
       </div>
 
       <div className="running-line">

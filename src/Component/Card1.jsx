@@ -41,11 +41,14 @@ const Card1 = () => {
         {products.map((p) => (
           <div className="product-card" key={p.id}>
             <img
-              src={p.image}
-              alt={p.name}
-              className="product-image"
-              style={{ height: "340px", width: "290px" }}
-            />
+  src={p.image}
+  alt={p.name}
+  className="product-image"
+  style={{
+    width: "100%",
+    height: "auto"
+  }}
+/>
             <h3 className="product-title">{p.name}</h3>
             <p className="product-price">Rs. {p.price}</p>
 

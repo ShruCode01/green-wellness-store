@@ -1,11 +1,10 @@
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* keeps it above other elements */
-  background-color: #fff; /* ensures it doesn’t look transparent */
+.carousel-img{
+    width:100%;
+    height:600px;
+    object-fit:cover;
 }
+
+
 
 .alink {
   display: flex;
@@ -116,7 +115,7 @@ nav {
 .about {
   background-color: rgb(37, 105, 37);
   color: white;
-  width: "100vw";
+  width: 100vw;
 }
 .about-content p {
   align-self: center;
@@ -165,13 +164,12 @@ nav {
 }
 
 /* Navbar base */
-.navbar {
-  width: 100%;
-  background: white;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #dcdcdc;
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:9999;
 }
 
 /* Container */
@@ -302,9 +300,10 @@ nav {
 /* Desktop Links */
 .alink {
   display: flex;
+  justify-content:center;
   gap: 2.5rem;
   align-items: center;
-  margin-left: 140px;
+  margin-left:auto;
 }
 
 .alink a {
@@ -325,7 +324,7 @@ nav {
   background-color: #0d6803; /* underline hover color */
   transform: translateX(-50%);
   transition: width 0.3s ease;
-}n
+}
 
 .alink a:hover::after {
   width: 80%;
@@ -500,4 +499,21 @@ nav {
   .alink {
     display: none !important;
   }
+}
+
+@media (max-width:991px){
+
+.carousel-img{
+    height:240px;
+    object-fit:cover;
+}
+
+}
+
+@media (max-width:360px){
+
+.carousel-img{
+    height:180px;
+}
+
 }
