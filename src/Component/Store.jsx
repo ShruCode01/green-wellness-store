@@ -26,7 +26,7 @@ const Store = () => {
         <div className="card">
           <img src={`${import.meta.env.BASE_URL}Gir.jpeg`} alt="Gir" />
           <h3>Ayurvedic Food By Category</h3>
-          <p>Pure honey, nature’s sweet gift.</p>
+          <p>Pure honey, nature.</p>
           <Link to="/card2"><button>View More</button></Link>
         </div>
 
@@ -40,7 +40,7 @@ const Store = () => {
         <div className="card">
           <img src={`${import.meta.env.BASE_URL}pack1.jpeg`} alt="Pack" />
           <h3>Ayurvedic Churna</h3>
-          <p>Full of Vitamin C & natural energy.</p>
+          <p>Full of Vitamin C.</p>
           <Link to="/card4"><button>View More</button></Link>
         </div>
       </div>

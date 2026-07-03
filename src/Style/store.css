@@ -100,3 +100,127 @@
 .card button:hover {
   background-color: #1b5e20;
 }
+
+/* ======================================
+      Tablet (2 cards)
+====================================== */
+
+@media (max-width:991px){
+
+.contain{
+    margin-top:70px;
+    padding:0 15px;
+}
+
+.contain h2{
+    font-size:2.2rem;
+}
+
+.contain p{
+    font-size:1rem;
+    text-align:center;
+}
+
+.card-container{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    padding:15px;
+}
+
+.card{
+
+    width:100%;
+    max-width:280px;
+    padding:12px;
+    margin:auto;
+
+}
+
+.card img{
+
+    height:140px;
+
+}
+
+.card h3{
+
+    font-size:1.1rem;
+
+}
+
+.card p{
+
+    font-size:14px;
+
+}
+
+.card button{
+
+    width:100%;
+
+}
+
+}
+/* ======================================
+      Small Phones
+====================================== */
+
+@media (max-width:360px){
+
+.card-container{
+
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+    padding:8px;
+
+}
+
+.card{
+
+    padding:8px;
+    width:100%;
+
+}
+
+.card img{
+
+    height:90px;
+
+}
+
+.card h3{
+
+    font-size:13px;
+    min-height:34px;
+
+}
+
+.card p{
+
+    font-size:11px;
+    min-height:28px;
+
+}
+
+.card button{
+
+    font-size:11px;
+    padding:6px;
+
+}
+
+.contain h2{
+
+    font-size:1.5rem;
+
+}
+
+.contain p{
+
+    font-size:14px;
+
+}
+
+}
