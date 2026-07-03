@@ -40,7 +40,7 @@ Total: ₹${totalPrice}`;
 
       <div className="cart-grid">
         {/* ✅ Show Products section only when payment is not selected */}
-        {!showUPI && paymentMethod !== "COD" && (
+        
           <div className="cart-card">
             <h3>
               <i className="bi bi-bag-fill"></i> Products
@@ -93,7 +93,7 @@ Total: ₹${totalPrice}`;
               ))}
             </ul>
           </div>
-        )}
+        
 
         {/* 🧍 Customer Details and Payment Options */}
         <div className="cart-card">
