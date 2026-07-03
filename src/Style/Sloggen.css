@@ -20,3 +20,58 @@
     width: 90%;
     line-height: 1.7;
 }
+@media (max-width: 992px) {
+
+    .heading2 {
+        font-size: 26px;
+    }
+
+    .para {
+        font-size: 1.3rem;
+    }
+
+    .heading5 {
+        width: 92%;
+        font-size: 16px;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .heading2 {
+        font-size: 22px;
+        line-height: 1.5;
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+
+    .para {
+        font-size: 1.15rem;
+        margin-top: 15px;
+    }
+
+    .heading5 {
+        width: 95%;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+}
+@media (max-width: 480px) {
+
+    .heading2 {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .para {
+        font-size: 1rem;
+    }
+
+    .heading5 {
+        width: 95%;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+}
