@@ -1,6 +1,6 @@
 .heading {
   background-color: rgb(231, 221, 221);
-  padding: auto;
+  padding: 20px;
 }
 
 /* Container width */
@@ -36,18 +36,7 @@ h6 {
   }
 }
 
-/* For mobile devices */
-@media (max-width: 768px) {
-  .natural-icons {
-    gap: 2rem;
-  }
-  .natural-icons img {
-    height: 130px;
-  }
-  h6 {
-    font-size: 15px;
-  }
-}
+
 
 /* For small phones */
 @media (max-width: 576px) {
@@ -63,4 +52,44 @@ h6 {
   h6 {
     font-size: 14px;
   }
+}
+
+/* ===========================
+   Mobile Horizontal Scroll
+=========================== */
+
+@media (max-width:768px){
+
+    .groceries{
+        width:100%;
+        overflow-x:auto;
+        overflow-y:hidden;
+        padding:10px;
+        scrollbar-width:none;
+    }
+
+    .groceries::-webkit-scrollbar{
+        display:none;
+    }
+
+    .natural-icons{
+
+        flex-wrap:nowrap !important;   /* Don't go to next line */
+        gap:20px !important;
+        width:max-content;
+
+    }
+
+    .natural-icons img{
+
+        height:100px;
+        width:auto;
+    }
+
+    .natural-icons > div{
+
+        flex:0 0 auto;   /* Don't shrink */
+
+    }
+
 }
