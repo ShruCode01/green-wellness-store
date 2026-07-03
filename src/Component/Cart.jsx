@@ -57,7 +57,13 @@ Total: ₹${totalPrice}`;
 
                     <div>
                       <h5 className="prod-name">{item.name}</h5>
-                      <p className="prod-price">Rs.{item.price}.00</p>
+                      <p className="prod-price">
+  ₹{item.price} × {item.quantity}
+</p>
+
+<h6 style={{ color: "green", fontWeight: "bold" }}>
+  Total: ₹{item.price * item.quantity}
+</h6>
 
                       <div className="qty-box">
                         <button

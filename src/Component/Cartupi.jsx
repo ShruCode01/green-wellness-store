@@ -1,17 +1,46 @@
 import React from 'react'
 import "../Style/Cartupi.css"
+import { useCart } from "./CartContext";
+import { useNavigate } from "react-router-dom";
 
 const Cartupi = () => {
+  const {  totalPrice } = useCart();
+
   function orderOnWhatsApp(){
     const phoneNumber = "8279830303"; 
-    const message = "Hello! I want to order some Ayurvedic products.";
+   const message = `
+Hello Chauhan Herbs 🌿
+
+I want to order:
+
+${cartItems
+  .map(
+    (item) =>
+      `${item.name}
+Quantity : ${item.quantity}
+Price : ₹${item.price * item.quantity}`
+  )
+  .join("\n\n")}
+
+------------------------
+Total = ₹${totalPrice}
+`;
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappLink, "_blank");
   }
 
+  const navigate = useNavigate();
+
+
+
   function gohome() {
-    window.location.href = "/";
-  }
+
+
+const gohome = () => {
+    navigate("/");
+  };
+};
+  
 
   return (
       <div className="cart-Container">
@@ -19,7 +48,7 @@ const Cartupi = () => {
       <h3 className="card-title"> <i className="bi bi-cash"></i> Order Summary</h3>
 
       <div className="price-row">
-        <h3 className="price">₹45,532</h3>
+        <h3 className="price">₹{totalPrice.toLocaleString("en-IN")}</h3>
         <p className="delivery"><i className="bi bi-truck"></i> Free delivery within 2/3 hours</p>
       </div>
 
