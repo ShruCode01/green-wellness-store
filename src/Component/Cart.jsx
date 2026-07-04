@@ -52,6 +52,26 @@ alert("Select Payment Method");
 return;
 
 }
+if (customer.phone.trim() === "") {
+  alert("Please enter your phone number.");
+  return;
+}
+if (customer.phone.length !== 10) {
+  alert("Phone number must be 10 digits.");
+  return;
+}
+if (!customer.email.includes("@")) {
+  alert("Please enter a valid email.");
+  return;
+}
+if (customer.address.trim() === "") {
+  alert("Please enter your address.");
+  return;
+}
+if (customer.pin.length !== 6) {
+  alert("Pin code must be 6 digits.");
+  return;
+}
 
 const order = {
 
@@ -64,21 +84,22 @@ totalItems,
 totalPrice,
 
 paymentMethod,
-
 paymentStatus:
 paymentMethod==="UPI"
-?
-"Pending"
-:
-"Cash On Delivery",
+? "Pending"
+: "Pending (COD)",
 
 orderStatus:"Placed",
 
-orderDate:new Date().toLocaleString()
+orderDate: Date.now()
 
 };
 
-console.log(order);
+localStorage.setItem(
+"latestOrder",
+JSON.stringify(order)
+);
+alert("Order Placed Successfully");
 
 }
   function gohome() {
