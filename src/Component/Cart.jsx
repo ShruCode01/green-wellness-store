@@ -12,6 +12,15 @@ const Cart = () => {
     addToCart,
     removeOne,
   } = useCart();
+
+
+  const [customer, setCustomer] = React.useState({
+    name:"",
+    phone:"",
+    email:"",
+    address:"",
+    pin:""
+});
  
   const [paymentMethod, setPaymentMethod] = React.useState(""); // initially empty
   const [showUPI, setShowUPI] = React.useState(false);
@@ -20,16 +29,58 @@ const Cart = () => {
     setShowUPI(paymentMethod === "UPI");
   }, [paymentMethod]);
 
+
   const orderOnWhatsApp = () => {
-    const phoneNumber = "8279830303";
-    const message = `Hello! I want to order these products: 
-${cartItems.map((i) => `- ${i.name} (x${i.quantity})`).join("\n")}
-Total: ₹${totalPrice}`;
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
-    )}`;
-    window.open(whatsappLink, "_blank");
-  };
+    if(!customer.name){
+
+alert("Enter Name");
+
+return;
+
+}
+if(cartItems.length===0){
+
+alert("Cart is Empty");
+
+return;
+
+}
+if(paymentMethod===""){
+
+alert("Select Payment Method");
+
+return;
+
+}
+
+const order = {
+
+customer,
+
+items: cartItems,
+
+totalItems,
+
+totalPrice,
+
+paymentMethod,
+
+paymentStatus:
+paymentMethod==="UPI"
+?
+"Pending"
+:
+"Cash On Delivery",
+
+orderStatus:"Placed",
+
+orderDate:new Date().toLocaleString()
+
+};
+
+console.log(order);
+
+}
   function gohome() {
     window.location.href = "/";
   }
@@ -102,35 +153,77 @@ Total: ₹${totalPrice}`;
           </h3>
 
           <div className="input-group">
-            <input type="text" required />
+           <input
+value={customer.name}
+onChange={(e)=>
+setCustomer({
+...customer,
+name:e.target.value
+})
+}
+/>
             <label>
               <i className="bi bi-person-fill icon"></i> Your Name
             </label>
           </div>
 
           <div className="input-group">
-            <input type="text" required />
+            <input
+           
+              value={customer.phone}
+              onChange={(e) =>
+                setCustomer({
+                  ...customer,
+                  phone: e.target.value
+                })
+              }
+              required
+            />
             <label>
               <i className="bi bi-telephone-fill"></i> Phone Number
             </label>
           </div>
 
           <div className="input-group">
-            <input type="email" required />
+         <input
+value={customer.email}
+onChange={(e)=>
+setCustomer({
+...customer,
+email:e.target.value
+})
+}
+/>
             <label>
               <i className="bi bi-envelope-fill icon"></i> Your Email
             </label>
           </div>
 
           <div className="input-group">
-            <input type="text" required />
+          <input
+value={customer.address}
+onChange={(e)=>
+setCustomer({
+...customer,
+address:e.target.value
+})
+}
+/>
             <label>
               <i className="bi bi-geo-alt-fill"></i> Delivery Address
             </label>
           </div>
 
           <div className="input-group">
-            <input type="text" required />
+         <input
+value={customer.pin}
+onChange={(e)=>
+setCustomer({
+...customer,
+pin:e.target.value
+})
+}
+/>
             <label>
               <i className="bi bi-geo-fill"></i> Pin Code
             </label>
