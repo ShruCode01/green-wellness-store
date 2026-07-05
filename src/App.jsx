@@ -22,7 +22,7 @@ import SignUp from "./Component/SignUp";
 import Cart from "./Component/Cart";
 import { useCart } from "./Component/CartContext";
 import OrderSuccess from "./Component/OrderSuccess";
-
+import MyOrders from "./Component/MyOrders";
 import "./Style/Index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -138,6 +138,7 @@ const App = () => {
     <Link to="/contact" className="nav-link-custom">
       Contact
     </Link>
+    <Link to="/orders">📦 My Orders</Link>
   </div>
 
   {/* Right Side Icons */}
@@ -266,6 +267,9 @@ const App = () => {
     <Link className="mobile-link" to="/contact" onClick={() => setOpenMobileMenu(false)}>
       Contact
     </Link>
+    <Link className="mobile-link" to="/orders" onClick={() => setOpenMobileMenu(false)}>
+      📦 My Orders
+    </Link>
   </div>
 </nav>
 
@@ -286,6 +290,10 @@ const App = () => {
         <Route path="/search" element={<SearchResults />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/success" element={<OrderSuccess />} />
+        <Route
+path="/orders"
+element={<MyOrders/>}
+/>
       </Routes>
 
       <Footer />
