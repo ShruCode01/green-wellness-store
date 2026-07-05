@@ -2,7 +2,7 @@ import React from "react";
 import { useCart } from "./CartContext";
 import "../Style/Cart.css";
 import Cartupi from "./Cartupi";
-
+import { useNavigate } from "react-router-dom";
 const Cart = () => {
   const {
     cartItems,
@@ -11,6 +11,7 @@ const Cart = () => {
     removeFromCart,
     addToCart,
     removeOne,
+    clearCart,
   } = useCart();
 
 
@@ -56,20 +57,20 @@ if (customer.phone.trim() === "") {
   alert("Please enter your phone number.");
   return;
 }
-if (customer.phone.length !== 10) {
-  alert("Phone number must be 10 digits.");
+if (!/^[0-9]{10}$/.test(customer.phone)) {
+  alert("Enter a valid 10 digit phone number.");
   return;
 }
-if (!customer.email.includes("@")) {
-  alert("Please enter a valid email.");
+if (!/\S+@\S+\.\S+/.test(customer.email)) {
+  alert("Enter a valid email.");
   return;
 }
 if (customer.address.trim() === "") {
   alert("Please enter your address.");
   return;
 }
-if (customer.pin.length !== 6) {
-  alert("Pin code must be 6 digits.");
+if (!/^[0-9]{6}$/.test(customer.pin)) {
+  alert("Enter a valid 6 digit PIN code.");
   return;
 }
 const oldOrders =
@@ -89,11 +90,11 @@ paymentMethod,
 paymentStatus:
 paymentMethod==="UPI"
 ? "Pending"
-: "Pending (COD)",
+: "Cash On Delivery",
 
 orderStatus:"Placed",
 
-orderDate: Date.now()
+orderDate: new Date().toLocaleString()
 
 };
 localStorage.setItem(
@@ -108,14 +109,20 @@ JSON.stringify(oldOrders)
 );
 alert("Order Placed Successfully");
 console.log(order);
+clearCart();
+
+navigate("/success");
 
 
 }
+const navigate = useNavigate();
   function gohome() {
     window.location.href = "/";
   }
   
+  
   return (
+    
     <div className="cart-container">
       <h2 className="cart-heading">🛒 Your Shopping Cart</h2>
 
@@ -309,7 +316,7 @@ pin:e.target.value
               <i className="bi bi-truck"></i> Free delivery within 2/3 hours
             </p>
             <button onClick={orderOnWhatsApp} className="cart-btn">
-              <i className="bi bi-whatsapp"></i> Order on WhatsApp
+              Place Order 
             </button>
             <button
               onClick={gohome}

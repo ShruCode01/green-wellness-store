@@ -40,6 +40,10 @@ export const CartProvider = ({ children }) => {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
   };
 
+  const clearCart = () => {
+  setCartItems([]);
+};
+
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = cartItems.reduce(
     (sum, item) => sum + item.quantity * item.price,
@@ -53,6 +57,7 @@ export const CartProvider = ({ children }) => {
         addToCart,
         removeOne,   // ✅ this was missing
         removeFromCart,
+        clearCart,
         totalItems,
         totalPrice,
       }}
