@@ -36,12 +36,12 @@ orders.map((order,index)=>(
 className="order-card"
 key={index}
 >
-<h3>
+<h6 style={{color:"red"}}>
 
 Order ID:
 {order.orderId}
 
-</h3>
+</h6>
 
 <p>
 
