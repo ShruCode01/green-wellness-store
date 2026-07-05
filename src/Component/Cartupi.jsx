@@ -59,7 +59,7 @@ const gohome = () => {
 
       <div className="button-group">
         <button onClick={orderOnWhatsApp} className="cart-btn whatsapp">
-          <i className="bi bi-whatsapp"></i> Please order on WhatsApp
+           Place order 
         </button>
 
         <button onClick={gohome} className="cart-btn home" style={{backgroundColor:"black"}}>
