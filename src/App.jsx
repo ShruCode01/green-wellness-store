@@ -21,7 +21,7 @@ import Login from "./Component/Login";
 import SignUp from "./Component/SignUp";
 import Cart from "./Component/Cart";
 import { useCart } from "./Component/CartContext";
-
+import OrderSuccess from "./Component/OrderSuccess";
 
 import "./Style/Index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -285,6 +285,7 @@ const App = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/search" element={<SearchResults />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/success" element={<OrderSuccess />} />
       </Routes>
 
       <Footer />

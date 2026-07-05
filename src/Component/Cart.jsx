@@ -107,7 +107,7 @@ localStorage.setItem(
 "orders",
 JSON.stringify(oldOrders)
 );
-alert("Order Placed Successfully");
+
 console.log(order);
 clearCart();
 
