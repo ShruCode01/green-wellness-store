@@ -72,6 +72,8 @@ if (customer.pin.length !== 6) {
   alert("Pin code must be 6 digits.");
   return;
 }
+const oldOrders =
+JSON.parse(localStorage.getItem("orders")) || [];
 
 const order = {
 
@@ -94,12 +96,19 @@ orderStatus:"Placed",
 orderDate: Date.now()
 
 };
-
 localStorage.setItem(
-"latestOrder",
-JSON.stringify(order)
+  "latestOrder",
+  JSON.stringify(order)
+);
+
+oldOrders.push(order);
+localStorage.setItem(
+"orders",
+JSON.stringify(oldOrders)
 );
 alert("Order Placed Successfully");
+console.log(order);
+
 
 }
   function gohome() {
