@@ -1,91 +1,123 @@
-.success-container{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-min-height:100vh;
-
-background:#f7f7f7;
-
-padding:20px;
-
+.success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f7f8fa;
+    padding: 20px;
 }
 
-.success-card{
-
-background:white;
-
-width:500px;
-
-padding:35px;
-
-border-radius:20px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-
-text-align:center;
-
+.success-card {
+    width: 100%;
+    max-width: 520px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 40px 35px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    transition: transform .3s ease;
 }
 
-.success-card h1{
-
-color:green;
-
-margin-bottom:15px;
-
+.success-card:hover {
+    transform: translateY(-5px);
 }
 
-.success-card p{
-
-font-size:18px;
-
-margin:10px 0;
-
+.success-card h1 {
+    color: #198754;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
-.success-card button{
-
-margin-top:20px;
-
-padding:12px 25px;
-
-border:none;
-
-background:green;
-
-color:white;
-
-border-radius:8px;
-
-cursor:pointer;
-
-font-size:17px;
-
+.success-card p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
+    margin: 10px 0;
 }
 
-.success-card button:hover{
-
-background:#006400;
-
+.success-card button {
+    margin-top: 25px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 10px;
+    background: #198754;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease;
 }
 
-@media(max-width:768px){
-
-.success-card{
-
-width:95%;
-
-padding:25px;
-
+.success-card button:hover {
+    background: #146c43;
+    transform: scale(1.05);
 }
 
-.success-card p{
+.success-card button:active {
+    transform: scale(.97);
+}
+@media (max-width: 992px) {
 
-font-size:16px;
+    .success-card {
+        max-width: 460px;
+        padding: 35px 28px;
+    }
+
+    .success-card h1 {
+        font-size: 1.8rem;
+    }
+
+    .success-card p {
+        font-size: 17px;
+    }
 
 }
+@media (max-width: 768px) {
+
+    .success-container {
+        padding: 15px;
+    }
+
+    .success-card {
+        width: 100%;
+        padding: 28px 22px;
+        border-radius: 15px;
+    }
+
+    .success-card h1 {
+        font-size: 1.6rem;
+    }
+
+    .success-card p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .success-card button {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+}
+@media (max-width: 480px) {
+
+    .success-card {
+        padding: 22px 18px;
+    }
+
+    .success-card h1 {
+        font-size: 1.4rem;
+    }
+
+    .success-card p {
+        font-size: 14px;
+    }
+
+    .success-card button {
+        font-size: 15px;
+        padding: 13px;
+    }
 
 }
