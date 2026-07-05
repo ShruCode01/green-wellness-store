@@ -1,0 +1,146 @@
+import React from "react";
+import "../Style/MyOrders.css";
+
+const MyOrders = () => {
+
+const orders =
+JSON.parse(localStorage.getItem("orders")) || [];
+
+if(orders.length===0){
+
+return(
+
+<div className="orders-empty">
+
+<h2>No Orders Yet 😔</h2>
+
+<p>Place your first order.</p>
+
+</div>
+
+);
+
+}
+
+return(
+
+<div className="orders-container">
+
+<h1>📦 My Orders</h1>
+
+{
+
+orders.map((order,index)=>(
+
+<div
+className="order-card"
+key={index}
+>
+
+<h3>
+
+Order #{index+1}
+
+</h3>
+
+<p>
+
+<b>Name :</b>
+
+{order.customer.name}
+
+</p>
+
+<p>
+
+<b>Phone :</b>
+
+{order.customer.phone}
+
+</p>
+
+<p>
+
+<b>Date :</b>
+
+{order.orderDate}
+
+</p>
+
+<p>
+
+<b>Payment :</b>
+
+{order.paymentMethod}
+
+</p>
+
+<p>
+
+<b>Status :</b>
+
+{order.orderStatus}
+
+</p>
+
+<p>
+
+<b>Total :</b>
+
+₹{order.totalPrice}
+
+</p>
+
+<hr/>
+
+<h4>Products</h4>
+
+{
+
+order.items.map((item)=>(
+
+<div
+key={item.id}
+className="order-product"
+>
+
+<img
+src={item.image}
+alt={item.name}
+/>
+
+<div>
+
+<h5>{item.name}</h5>
+
+<p>
+
+₹{item.price}
+
+×
+
+{item.quantity}
+
+</p>
+
+</div>
+
+</div>
+
+))
+
+}
+
+</div>
+
+))
+
+}
+
+</div>
+
+);
+
+};
+
+export default MyOrders;
