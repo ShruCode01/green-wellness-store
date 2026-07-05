@@ -77,7 +77,8 @@ const oldOrders =
 JSON.parse(localStorage.getItem("orders")) || [];
 
 const order = {
-
+orderId:
+"CH" + Date.now(),
 customer,
 
 items: cartItems,
@@ -94,8 +95,8 @@ paymentMethod==="UPI"
 
 orderStatus:"Placed",
 
-orderDate: new Date().toLocaleString()
-
+orderDate: new Date().toLocaleString(),
+deliveryStatus:"Order Placed"
 };
 localStorage.setItem(
   "latestOrder",

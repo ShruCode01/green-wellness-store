@@ -36,10 +36,10 @@ orders.map((order,index)=>(
 className="order-card"
 key={index}
 >
-
 <h3>
 
-Order #{index+1}
+Order ID:
+{order.orderId}
 
 </h3>
 
@@ -91,7 +91,24 @@ Order #{index+1}
 
 </p>
 
+<p>
+
+<b>Delivery Status :</b>
+
+{order.deliveryStatus}
+
+</p>
+
+<p>
+
+<b>Payment :</b>
+
+{order.paymentStatus}
+
+</p>
+
 <hr/>
+
 
 <h4>Products</h4>
 
