@@ -21,6 +21,43 @@ return(
 );
 
 }
+const cancelOrder = (orderId) => {
+
+const orders =
+JSON.parse(localStorage.getItem("orders")) || [];
+
+const updatedOrders =
+orders.map((order)=>
+
+order.orderId===orderId
+
+?
+
+{
+...order,
+
+orderStatus:"Cancelled",
+
+deliveryStatus:"Cancelled"
+
+}
+
+:
+
+order
+
+);
+
+localStorage.setItem(
+"orders",
+JSON.stringify(updatedOrders)
+);
+
+window.location.reload();
+
+}
+
+
 
 return(
 
@@ -147,12 +184,36 @@ alt={item.name}
 ))
 
 }
+<button
+
+
+className="cancel-btn"
+
+
+onClick={()=>cancelOrder(order.orderId)}
+
+
+>
+
+
+Cancel Order
+
+
+</button>
 
 </div>
 
+
 ))
 
+
 }
+
+
+
+
+
+
 
 </div>
 
