@@ -215,3 +215,20 @@ cursor:pointer;
 margin-top:15px;
 
 }
+.buy-btn{
+
+background:green;
+
+color:white;
+
+border:none;
+
+padding:10px 20px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+margin-left:10px;
+
+}

@@ -1,7 +1,9 @@
 import React from "react";
 import "../Style/MyOrders.css";
+import { useCart } from "./CartContext";
 
 const MyOrders = () => {
+    const { addToCart } = useCart();
 
 const orders =
 JSON.parse(localStorage.getItem("orders")) || [];
@@ -56,7 +58,17 @@ JSON.stringify(updatedOrders)
 window.location.reload();
 
 }
+const buyAgain = (items)=>{
 
+items.forEach((item)=>{
+
+addToCart(item);
+
+});
+
+alert("Items Added To Cart");
+
+}
 
 
 return(
@@ -198,6 +210,19 @@ onClick={()=>cancelOrder(order.orderId)}
 
 Cancel Order
 
+
+</button>
+
+
+<button
+
+className="buy-btn"
+
+onClick={()=>buyAgain(order.items)}
+
+>
+
+Buy Again
 
 </button>
 
