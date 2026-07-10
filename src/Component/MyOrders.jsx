@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Style/MyOrders.css";
 import { useCart } from "./CartContext";
+
 
 const MyOrders = () => {
     const { addToCart } = useCart();
 
 const orders =
 JSON.parse(localStorage.getItem("orders")) || [];
+const [search, setSearch] = useState("");
+
 
 if(orders.length===0){
 
