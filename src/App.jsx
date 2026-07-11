@@ -43,6 +43,16 @@ const SearchResults = () => {
 
   const filtered = products.filter((p) => p.toLowerCase().includes(query));
 
+  const redirect = window.location.search;
+
+if (redirect.startsWith("?/")) {
+  const newUrl =
+    window.location.pathname +
+    redirect.replace("?/", "").replace(/~and~/g, "&");
+
+  window.history.replaceState(null, "", newUrl);
+}
+
   return (
     <div className="container mt-5">
       <h2>
