@@ -55,6 +55,13 @@ const cancelOrder = (orderId) => {
 
   setOrders(updatedOrders); // ✅ Updates UI instantly
 };
+const buyAgain = (items) => {
+  items.forEach((item) => {
+    addToCart(item);
+  });
+
+  alert("Items added to cart successfully!");
+};
 
 
 return(
