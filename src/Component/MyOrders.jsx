@@ -10,6 +10,20 @@ const orders =
 JSON.parse(localStorage.getItem("orders")) || [];
 const [search, setSearch] = useState("");
 
+const filteredOrders = orders.filter((order) => {
+  const orderIdMatch = (order.orderId || "")
+.toString()
+.includes(search)
+    
+   
+
+  const productMatch = order.items.some((item) =>
+    item.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+  return orderIdMatch || productMatch;
+});
+
 
 if(orders.length===0){
 
@@ -30,27 +44,14 @@ const cancelOrder = (orderId) => {
 
 const orders =
 JSON.parse(localStorage.getItem("orders")) || [];
-
-const updatedOrders =
-orders.map((order)=>
-
-order.orderId===orderId
-
-?
-
-{
-...order,
-
-orderStatus:"Cancelled",
-
-deliveryStatus:"Cancelled"
-
-}
-
-:
-
-order
-
+const updatedOrders = orders.map((order) =>
+  order.orderId === orderId
+    ? {
+        ...order,
+        orderStatus: "Cancelled",
+        deliveryStatus: "Cancelled",
+      }
+    : order
 );
 
 localStorage.setItem(
@@ -79,10 +80,17 @@ return(
 <div className="orders-container">
 
 <h1>📦 My Orders</h1>
+<input
+  type="text"
+  placeholder="Search Order ID or Product..."
+  value={search}
+  onChange={(e) => setSearch(e.target.value)}
+  className="search-box"
+/>
 
 {
 
-orders.map((order,index)=>(
+filteredOrders.map((order,index)=>(
 
 <div
 className="order-card"
@@ -199,22 +207,23 @@ alt={item.name}
 ))
 
 }
+{
+order.orderStatus !== "Cancelled" && (
+
 <button
-
-
 className="cancel-btn"
-
-
 onClick={()=>cancelOrder(order.orderId)}
-
-
 >
-
-
 Cancel Order
-
-
 </button>
+
+)
+}
+
+
+
+
+
 
 
 <button
