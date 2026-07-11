@@ -5,9 +5,9 @@ import { useCart } from "./CartContext";
 
 const MyOrders = () => {
     const { addToCart } = useCart();
-
-const orders =
-JSON.parse(localStorage.getItem("orders")) || [];
+const [orders, setOrders] = useState(
+  JSON.parse(localStorage.getItem("orders")) || []
+);
 const [search, setSearch] = useState("");
 
 const filteredOrders = orders.filter((order) => {
@@ -41,38 +41,20 @@ return(
 
 }
 const cancelOrder = (orderId) => {
+  const updatedOrders = orders.map((order) =>
+    order.orderId === orderId
+      ? {
+          ...order,
+          orderStatus: "Cancelled",
+          deliveryStatus: "Cancelled",
+        }
+      : order
+  );
 
-const orders =
-JSON.parse(localStorage.getItem("orders")) || [];
-const updatedOrders = orders.map((order) =>
-  order.orderId === orderId
-    ? {
-        ...order,
-        orderStatus: "Cancelled",
-        deliveryStatus: "Cancelled",
-      }
-    : order
-);
+  localStorage.setItem("orders", JSON.stringify(updatedOrders));
 
-localStorage.setItem(
-"orders",
-JSON.stringify(updatedOrders)
-);
-
-window.location.reload();
-
-}
-const buyAgain = (items)=>{
-
-items.forEach((item)=>{
-
-addToCart(item);
-
-});
-
-alert("Items Added To Cart");
-
-}
+  setOrders(updatedOrders); // ✅ Updates UI instantly
+};
 
 
 return(
@@ -212,7 +194,9 @@ order.orderStatus !== "Cancelled" && (
 
 <button
 className="cancel-btn"
-onClick={()=>cancelOrder(order.orderId)}
+onClick={()=>cancelOrder(order.orderId)
+  
+}
 >
 Cancel Order
 </button>
