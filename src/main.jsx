@@ -8,7 +8,8 @@ import { CartProvider } from './Component/CartContext';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/green-wellness-store">
+    {/* <BrowserRouter basename="/green-wellness-store"> */}
+    <BrowserRouter>
       <CartProvider>
         <App />
       </CartProvider>
